@@ -11,6 +11,15 @@ def guardarMenu(miMenu):
         json.dump(miMenu,outfile,indent=4) 
 
 
+def abrirPedidos():
+    Pedidos=[]
+    with open('Pedidos.json','r',encoding='utf-8') as openfile:
+        Pedidos = json.load(openfile)  
+    return Pedidos
+def guardarPedido(miPedido): 
+    with open("Pedidos.json","w",encoding='utf-8') as outfile:
+        json.dump(miPedido,outfile,indent=4) 
+
 
 boolGeneral = True
 
@@ -21,10 +30,14 @@ while boolGeneral == True:
     if eleccion == 1:
         print("CREACION DE PEDIDOS\n")
         Menu = abrirMenu()
-        Pedido = []
+        items = []
 
+        NombreCliente = str(input("Ingrese el nombre del cliente que va a hacer el pedido: "))
         boolPedido = True
         while boolPedido == True:
+
+
+            system("cls")
 
             contador  = 1 
             for i in Menu["Menu"]:
@@ -40,24 +53,30 @@ while boolGeneral == True:
                 contador += 1
             EleccionProducto = int(input("\n¿Qué producto desea añadir a su compra?"))
 
-            Pedido.append(
+            items.append(
                 {
                     "Tipo" : Menu["Menu"][eleccionMenu-1]["Tipo"],
                     "Nombre" : Menu["Menu"][eleccionMenu-1]["Productos"][EleccionProducto-1]["Nombre"],
                     "Precio" : Menu["Menu"][eleccionMenu-1]["Productos"][EleccionProducto-1]["Precio"]
                 }
             )
-
             AgregarOtro = int(input("¿Deseas agregar otro producto? 1/Si   2/No        ")) 
             
             if AgregarOtro == 1:
                 system("cls")
                 continue
             elif AgregarOtro == 2: 
-                print("Tu pedido es:\n")
-                print("Tipo | Nombre | Precio\n")
-                for i in Pedido:
-                    print(i["Tipo"],"|",i["Nombre"],"|",i["Precio"])
+                Pedidos = abrirPedidos()
+
+                Pedidos.append(
+                {
+                    "Cliente" : NombreCliente,
+                    "items" : items,
+                    "Estado" : "Creado"
+                }
+            )
+                
+                guardarPedido(Pedidos)
                 input("\nPresione ENTER para continuar")
                 boolPedido = False
             else: 
