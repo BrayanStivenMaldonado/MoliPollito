@@ -3,96 +3,96 @@
         "Cliente": "Juan Perez",
         "items": [
             {
-                "Tipo": "entrada",
+                "Tipo": "Entradas",
                 "Nombre": "Empanadas Mini",
                 "Precio": 9000
             },
             {
-                "Tipo": "plato_fuerte",
+                "Tipo": "Platos Fuertes",
                 "Nombre": "Pasta Bolognesa",
                 "Precio": 35000
             },
             {
-                "Tipo": "bebida",
+                "Tipo": "Bebidas",
                 "Nombre": "Coca-Cola",
                 "Precio": 3000
             }
         ],
-        "estado": "pagado"
+        "Estado": "pagado"
     },
     {
         "Cliente": "Maria Lopez",
         "items": [
             {
-                "Tipo": "entrada",
+                "Tipo": "Entradas",
                 "Nombre": "Papas Fritas",
                 "Precio": 5000
             },
             {
-                "Tipo": "plato_fuerte",
+                "Tipo": "Platos Fuertes",
                 "Nombre": "Hamburguesa",
                 "Precio": 28000
             },
             {
-                "Tipo": "bebida",
+                "Tipo": "Bebidas",
                 "Nombre": "Jugo Natural",
                 "Precio": 5000
             }
         ],
-        "estado": "preparacion"
+        "Estado": "preparacion"
     },
     {
         "Cliente": "Carlos Gomez",
         "items": [
             {
-                "Tipo": "entrada",
+                "Tipo": "Entradas",
                 "Nombre": "Dedos de Queso",
                 "Precio": 11000
             },
             {
-                "Tipo": "plato_fuerte",
+                "Tipo": "Platos Fuertes",
                 "Nombre": "Pollo al Curry",
                 "Precio": 30000
             },
             {
-                "Tipo": "bebida",
+                "Tipo": "Bebidas",
                 "Nombre": "Vino",
                 "Precio": 8000
             }
         ],
-        "estado": "creado"
+        "Estado": "creado"
     },
     {
         "Cliente": "Ana Martinez",
         "items": [
             {
-                "Tipo": "entrada",
+                "Tipo": "Entradas",
                 "Nombre": "Tostada Francesa",
                 "Precio": 10000
             },
             {
-                "Tipo": "plato_fuerte",
+                "Tipo": "Platos Fuertes",
                 "Nombre": "Lechona",
                 "Precio": 25000
             },
             {
-                "Tipo": "bebida",
+                "Tipo": "Bebidas",
                 "Nombre": "Cerveza",
                 "Precio": 3500
             }
         ],
-        "estado": "servido"
+        "Estado": "servido"
     },
     {
         "Cliente": "Andres Gomez",
         "items": [
             {
-                "Tipo": "entrada",
+                "Tipo": "Entradas",
                 "Nombre": "Tostada Francesa",
                 "Precio": 10000
             }
         ],
-        "estado": "creado"
+        "Estado": "creado"
     },
     {
         "Cliente": "Josefino",
