@@ -24,7 +24,7 @@ def guardarPedido(miPedido):
 boolGeneral = True
 
 while boolGeneral == True:
-    eleccion = int(input("BIENVENIDO A MOLIPOLLITO\n\n1.Crear Pedidos  \n2.  \n3."))
+    eleccion = int(input("BIENVENIDO A MOLIPOLLITO\n\n1.Crear Pedidos  \n2.Listar pedidos  \n3.  \n"))
     system("cls")
 
     if eleccion == 1:
@@ -86,7 +86,17 @@ while boolGeneral == True:
         
 
     elif eleccion == 2: 
-        print("")
+        print("VISUALIZACIÓN DE PEDIDOS")
+        Pedidos = abrirPedidos()
+        contador = 1
+        for i in Pedidos:
+            print(contador,i["Cliente"])
+            contador += 1
+        eleccionRevisar = int(input("\nSeleccione al cliente que le desea revisar el pedido: "))
+        system("cls")
+
+        for i in Pedidos[eleccionRevisar-1]["items"]:
+            print(i["Tipo"],"|",i["Nombre"],"|",i["Precio"])
     
     elif eleccion == 3:
         print("")
